@@ -305,3 +305,4 @@ end)
 -- Start on Home
 showHome()
 button.Activated:Connect(function()
+button.Activated:Connect(callback)
