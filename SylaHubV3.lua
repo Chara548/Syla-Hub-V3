@@ -394,3 +394,12 @@ featureButton("🦘 JumpPower 75", function()
         humanoid.JumpPower = 75
     end
 end)
+featureButton("📍 Teleport to Spawn", function()
+    local character = player.Character
+    local root = character and character:FindFirstChild("HumanoidRootPart")
+    local spawn = workspace:FindFirstChildOfClass("SpawnLocation")
+
+    if root and spawn then
+        root.CFrame = spawn.CFrame + Vector3.new(0, 3, 0)
+    end
+end)
