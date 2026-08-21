@@ -363,7 +363,7 @@ local function showFeatures()
 
         return button
     end
-
+end
     featureButton("🔄 Refresh Player Info", function()
         showPlayer()
     end)
