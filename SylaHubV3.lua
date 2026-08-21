@@ -514,3 +514,5 @@ local function showSettings()
         showSettings()
     end)
 end
+print("Syla Hub V3: script started")
+print("Syla Hub V3: creating loading UI")
