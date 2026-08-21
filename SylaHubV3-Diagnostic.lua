@@ -1,4 +1,6 @@
 warn("SYLA CHECKPOINT 1")
+warn("SYLA CHECKPOINT 2")
+warn("SYLA CHECKPOINT 3")
 Status: Ready
 local function showFeatures()
     clearContent()
