@@ -304,4 +304,66 @@ end)
 
 -- Start on Home
 showHome()
+⭐ FEATURES
 
+[ Feature 1 ]    ON/OFF
+[ Feature 2 ]    ON/OFF
+[ Feature 3 ]    ON/OFF
+[ Feature 4 ]    ON/OFF
+[ Feature 5 ]    ON/OFF
+
+──────────────
+Status: Ready
+local function showFeatures()
+    clearContent()
+
+    local title = Instance.new("TextLabel")
+    title.Parent = content
+    title.Size = UDim2.new(1, -20, 0, 40)
+    title.Position = UDim2.new(0, 10, 0, 10)
+    title.BackgroundTransparency = 1
+    title.Text = "⭐ Features"
+    title.TextSize = 24
+    title.Font = Enum.Font.GothamBold
+    title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    title.TextXAlignment = Enum.TextXAlignment.Left
+
+    local status = Instance.new("TextLabel")
+    status.Parent = content
+    status.Size = UDim2.new(1, -20, 0, 30)
+    status.Position = UDim2.new(0, 10, 0, 55)
+    status.BackgroundTransparency = 1
+    status.Text = "Status: Ready"
+    status.TextSize = 14
+    status.Font = Enum.Font.Gotham
+    status.TextColor3 = Color3.fromRGB(180, 180, 180)
+    status.TextXAlignment = Enum.TextXAlignment.Left
+
+    local function featureButton(text, callback)
+        local button = Instance.new("TextButton")
+        button.Parent = content
+        button.Size = UDim2.new(1, -20, 0, 42)
+        button.BackgroundColor3 = Color3.fromRGB(35, 35, 45)
+        button.Text = text
+        button.TextSize = 16
+        button.Font = Enum.Font.GothamMedium
+        button.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = UDim.new(0, 8)
+        corner.Parent = button
+
+        button.MouseButton1Click:Connect(callback)
+
+        return button
+    end
+
+    featureButton("🔄 Refresh Player Info", function()
+        showPlayer()
+    end)
+
+    featureButton("🧹 Clear UI", function()
+        clearContent()
+        status.Text = "Status: UI Cleared"
+    end)
+end
