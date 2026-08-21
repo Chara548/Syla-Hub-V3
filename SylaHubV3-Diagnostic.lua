@@ -1,4 +1,22 @@
-warn("SYLA CHECKPOINT 1")
+-- Checkpoint 1
+local function showDiagnostic(text)
+    local player = game:GetService("Players").LocalPlayer
+    local gui = player:WaitForChild("PlayerGui")
+
+    local screen = Instance.new("ScreenGui")
+    screen.Name = "SylaDiagnostic"
+    screen.ResetOnSpawn = false
+    screen.Parent = gui
+
+    local label = Instance.new("TextLabel")
+    label.Size = UDim2.new(0, 350, 0, 60)
+    label.Position = UDim2.new(0.5, -175, 0, 20)
+    label.TextScaled = true
+    label.Text = text
+    label.Parent = screen
+end
+
+showDiagnostic("SYLA CHECKPOINT 1")
 warn("SYLA CHECKPOINT 2")
 warn("SYLA CHECKPOINT 3")
 Status: Ready
