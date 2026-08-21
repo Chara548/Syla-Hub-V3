@@ -376,3 +376,21 @@ featureButton("♻️ Reset Character", function()
         humanoid.Health = 0
     end
 end)
+featureButton("🏃 WalkSpeed 32", function()
+    local character = player.Character
+    local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+
+    if humanoid then
+        humanoid.WalkSpeed = 32
+    end
+end)
+
+featureButton("🦘 JumpPower 75", function()
+    local character = player.Character
+    local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+
+    if humanoid then
+        humanoid.UseJumpPower = true
+        humanoid.JumpPower = 75
+    end
+end)
