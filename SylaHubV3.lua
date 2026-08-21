@@ -458,3 +458,59 @@ local function showSettings()
         showSettings()
     end)
 end
+-- Settings
+local animationsEnabled = true
+local notificationsEnabled = true
+local mobileModeEnabled = true
+local transparencyLevel = 0
+
+local function applyTransparency()
+    -- Change these to the actual UI objects in your hub if needed
+    showSettings()
+        mainFrame.BackgroundTransparency = transparencyLevel
+    end
+end
+
+local function showSettings()
+    clearContent()
+
+    featureButton("✨ Animations: " .. (animationsEnabled and "ON" or "OFF"), function()
+        animationsEnabled = not animationsEnabled
+        showSettings()
+    end)
+
+    featureButton("🔔 Notifications: " .. (notificationsEnabled and "ON" or "OFF"), function()
+        notificationsEnabled = not notificationsEnabled
+        showSettings()
+    end)
+
+    featureButton("📱 Mobile Mode: " .. (mobileModeEnabled and "ON" or "OFF"), function()
+        mobileModeEnabled = not mobileModeEnabled
+        showSettings()
+    end)
+
+    featureButton("🎨 UI Transparency", function()
+        if transparencyLevel == 0 then
+            transparencyLevel = 0.25
+        elseif transparencyLevel == 0.25 then
+            transparencyLevel = 0.5
+        elseif transparencyLevel == 0.5 then
+            transparencyLevel = 0.75
+        else
+            transparencyLevel = 0
+        end
+
+        applyTransparency()
+        showSettings()
+    end)
+
+    featureButton("🔄 Reset Settings", function()
+        animationsEnabled = true
+        notificationsEnabled = true
+        mobileModeEnabled = true
+        transparencyLevel = 0
+
+        applyTransparency()
+        showSettings()
+    end)
+end
