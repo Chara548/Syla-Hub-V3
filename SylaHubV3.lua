@@ -414,3 +414,14 @@ featureButton("✨ Animations: ON", function()
         -- Disable animations
     end
 end)
+featureButton("✨ Animations: ON", function()
+    -- Toggle your existing UI animations here
+end)
+
+featureButton("🔔 Notifications: ON", function()
+    -- Toggle notifications here
+end)
+
+featureButton("🧹 Reset Settings", function()
+    -- Restore default settings
+end)
