@@ -367,3 +367,4 @@ local function showFeatures()
         status.Text = "Status: UI Cleared"
     end)
 end
+makeButton("Features", 160, showFeatures)
