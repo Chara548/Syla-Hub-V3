@@ -1,3 +1,4 @@
+print("Syla Hub V3 STARTED")
 -- Syla Hub V3
 -- UI foundation + legitimate client-side features
 -- Intended for use in your own Roblox experience / Studio testing.
