@@ -310,13 +310,13 @@ end)
 
 -- Start on Home
 showHome()
-⭐ FEATURES
-
-[ Feature 1 ]    ON/OFF
-[ Feature 2 ]    ON/OFF
-[ Feature 3 ]    ON/OFF
-[ Feature 4 ]    ON/OFF
-[ Feature 5 ]    ON/OFF
+-- ⭐ FEATURES
+-- [ Feature 1 ] ON/OFF
+-- [ Feature 2 ] ON/OFF
+-- [ Feature 3 ] ON/OFF
+-- [ Feature 4 ] ON/OFF
+-- [ Feature 5 ] ON/OFF
+-- Status: Ready
 
 ──────────────
 Status: Ready
