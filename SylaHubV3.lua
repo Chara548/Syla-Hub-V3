@@ -304,14 +304,4 @@ end)
 
 -- Start on Home
 showHome()
-button.Activated:Connect(function()
-button.Activated:Connect(callback)
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local actionEvent = ReplicatedStorage:WaitForChild("SylaHubAction")
 
-button.Activated:Connect(function()
-    actionEvent:FireServer("RefreshPlayer")
-end)
-button.MouseButton1Click:Connect(function()
-    print("Syla Hub button works!")
-end)
