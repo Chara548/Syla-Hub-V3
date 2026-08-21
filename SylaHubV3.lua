@@ -403,3 +403,14 @@ featureButton("📍 Teleport to Spawn", function()
         root.CFrame = spawn.CFrame + Vector3.new(0, 3, 0)
     end
 end)
+local animationsEnabled = true
+
+featureButton("✨ Animations: ON", function()
+    animationsEnabled = not animationsEnabled
+
+    if animationsEnabled then
+        -- Enable animations
+    else
+        -- Disable animations
+    end
+end)
