@@ -425,3 +425,36 @@ end)
 featureButton("🧹 Reset Settings", function()
     -- Restore default settings
 end)
+local animationsEnabled = true
+local notificationsEnabled = true
+local mobileModeEnabled = true
+
+local function showSettings()
+    clearContent()
+
+    featureButton("✨ Animations: " .. (animationsEnabled and "ON" or "OFF"), function()
+        animationsEnabled = not animationsEnabled
+        showSettings()
+    end)
+
+    featureButton("🔔 Notifications: " .. (notificationsEnabled and "ON" or "OFF"), function()
+        notificationsEnabled = not notificationsEnabled
+        showSettings()
+    end)
+
+    featureButton("📱 Mobile Mode: " .. (mobileModeEnabled and "ON" or "OFF"), function()
+        mobileModeEnabled = not mobileModeEnabled
+        showSettings()
+    end)
+
+    featureButton("🎨 UI Transparency", function()
+        -- Add transparency selector here
+    end)
+
+    featureButton("🔄 Reset Settings", function()
+        animationsEnabled = true
+        notificationsEnabled = true
+        mobileModeEnabled = true
+        showSettings()
+    end)
+end
