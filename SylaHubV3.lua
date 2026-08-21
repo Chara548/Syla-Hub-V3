@@ -1,3 +1,8 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Syla Hub V3",
+    Text = "Script started!",
+    Duration = 5
+})
 print("Syla Hub V3 STARTED")
 -- Syla Hub V3
 -- UI foundation + legitimate client-side features
